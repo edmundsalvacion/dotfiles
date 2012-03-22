@@ -27,4 +27,15 @@ export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM=auto
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Loads environment variables
+ENV_DIR=$HOME/.include/environment.d
+if [ ! -z `ls $ENV_DIR` ]
+then
+  for f in $ENV_DIR/*
+  do
+    . $f
+  done
+fi
