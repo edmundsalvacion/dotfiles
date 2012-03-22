@@ -10,7 +10,7 @@
 [alias]
 	datetag = !git tag `date \"+%Y%m%d%H%M\"`
 [push]
-	default = tracking
+  default = tracking
 [github]
   user = <%= print("Your GitHub Username: "); STDOUT.flush; STDIN.gets.strip %>
   token = <%= print("Your GitHub API Token: "); STDOUT.flush; STDIN.gets.strip %>
