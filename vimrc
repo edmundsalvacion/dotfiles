@@ -14,6 +14,7 @@ set expandtab
 "set autoindent
 
 " make awesomer
+set noswapfile
 set encoding=utf-8
 set scrolloff=3
 set showmode
