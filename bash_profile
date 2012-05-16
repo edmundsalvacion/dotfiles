@@ -35,7 +35,7 @@ export PATH=/usr/local/bin:$PATH
 
 # Loads environment variables
 ENV_DIR=$HOME/.include/environment.d
-if [ ! -z `ls $ENV_DIR` ]
+if [ ! -z "`ls $ENV_DIR`" ]
 then
   for f in $ENV_DIR/*
   do
