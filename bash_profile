@@ -1,14 +1,11 @@
 # PS1 with Git Completion
-PS1='\[\e[0;34m\]\u \W$(__git_ps1 " [%s]")\$ \[\e[m\]'
+PS1='\[\e[0;34m\]\u \W$(__git_ps1 " [%s]") 💻  \[\e[m\]'
 
 # Aliases
 alias ls='ls -G'
 alias ll='ls -l'
 alias flushcache='dscacheutil -flushcache'
 alias git=hub
-
-# RVM - This loads RVM into a shell session.
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Set Editor to be MacVim
 export EDITOR='mvim -f --nomru -c "au VimLeave * !open -a Terminal"'
