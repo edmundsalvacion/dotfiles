@@ -20,8 +20,6 @@ set scrolloff=3
 set showmode
 set showcmd
 set hidden
-set wildmenu
-set wildmode=list:longest
 set visualbell
 set cursorline
 set ttyfast
@@ -33,6 +31,13 @@ set mouse=a
 cmap W w
 nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <F6> :GundoToggle<CR>
+
+" wildmenu
+set wildmenu
+set wildmode=list:longest
+set wildchar=<Tab>
+set wildcharm=<C-Z>
+nnoremap <F13> :b <C-Z>
 
 " pimp my status line
 set statusline=
