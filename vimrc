@@ -1,19 +1,30 @@
 " general must haves
+set nocompatible
 filetype off
-" call pathogen#runtime_append_all_bundles()
-call pathogen#infect()
 filetype plugin indent on
 runtime! macros/matchit.vim
-set nocompatible
-set modelines=0
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" bundles
+Bundle 'gmarik/vundle'
+Bundle 'tpope/vim-rails'
+Bundle 'rstacruz/sparkup'
+Bundle 'tpope/vim-surround'
+Bundle 'sjl/gundo.vim'
+Bundle 'mileszs/ack.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-bundler'
+Bundle 'tpope/vim-fugitive'
 
 " tab me
 set tabstop=2
 set shiftwidth=2
 set expandtab
-"set autoindent
 
 " make awesomer
+set modelines=0
 set noswapfile
 set encoding=utf-8
 set scrolloff=3
