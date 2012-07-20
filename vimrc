@@ -17,6 +17,8 @@ Bundle 'mileszs/ack.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-fugitive'
+Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'skwp/vim-ruby-conque'
 
 " tab me
 set tabstop=2
