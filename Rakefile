@@ -30,6 +30,9 @@ task :install do
       link_file(file)
     end
   end
+
+  # run bundle install for vim
+  `vim +BundleInstall +qall > /dev/null 2>&1`
 end
 
 def replace_file(file)
