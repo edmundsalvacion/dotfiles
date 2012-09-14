@@ -42,8 +42,14 @@ set laststatus=2
 set relativenumber
 set mouse=a
 cmap W w
+command Sudow w !sudo tee % > /dev/null
 nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <F6> :GundoToggle<CR>
+
+" conque key bindings
+nmap <silent> <D-R> :call RunRspecCurrentFileConque()<CR>
+nmap <silent> <D-L> :call RunRspecCurrentLineConque()<CR>
+nmap <silent> ,<D-R> :call RunLastConqueCommand()<CR>
 
 " wildmenu
 set wildmenu
@@ -100,6 +106,11 @@ if has("gui_running")
     set guifont=Monaco:h13
     colorscheme mustang
 endif
+
+augroup vagrant
+	au!
+	au BufRead,BufNewFile Vagrantfile set filetype=ruby
+augroup END
 
 " always open nerdtree
 autocmd VimEnter * NERDTree
