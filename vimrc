@@ -18,7 +18,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jeetsukumaran/vim-buffergator'
-Bundle 'skwp/vim-ruby-conque'
 
 " tab me
 set tabstop=2
@@ -45,11 +44,6 @@ cmap W w
 command Sudow w !sudo tee % > /dev/null
 nnoremap <F5> :NERDTreeToggle<CR>
 nnoremap <F6> :GundoToggle<CR>
-
-" conque key bindings
-nmap <silent> <D-R> :call RunRspecCurrentFileConque()<CR>
-nmap <silent> <D-L> :call RunRspecCurrentLineConque()<CR>
-nmap <silent> ,<D-R> :call RunLastConqueCommand()<CR>
 
 " wildmenu
 set wildmenu
