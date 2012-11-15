@@ -1,0 +1,2 @@
+--type-add=ruby=.haml,.rake,.jbuilder
+--type-add=css=.less,.sass
