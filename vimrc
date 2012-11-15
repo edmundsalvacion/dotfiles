@@ -19,6 +19,7 @@ Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'tpope/vim-markdown'
+Bundle 'bkad/CamelCaseMotion'
 
 " tab me
 set tabstop=2
@@ -87,6 +88,12 @@ set formatoptions=qrn1
 
 " movement
 set whichwrap=b,s,<,>,[,]
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
 
 " colors and themes
 syntax on
