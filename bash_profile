@@ -1,5 +1,5 @@
 # PS1 with Git Completion
-PS1='\[\e[0;34m\]\u \W$(__git_ps1 " [%s]") 💻  \[\e[m\]'
+PS1='[\T] \[\e[0;34m\]\u \W$(__git_ps1 " [%s]") 💻  \[\e[m\]'
 
 # Aliases
 alias ls='ls -G'
@@ -22,7 +22,7 @@ export GIT_PS1_SHOWUNTRACKEDFILES=true
 export GIT_PS1_SHOWUPSTREAM=auto
 
 # PATH
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/Cellar/ruby/1.9.3-p194/bin:$PATH
 
 # Loads environment variables
 ENV_DIR=$HOME/.include/environment.d

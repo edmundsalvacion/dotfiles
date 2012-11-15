@@ -18,6 +18,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jeetsukumaran/vim-buffergator'
+Bundle 'tpope/vim-markdown'
 
 " tab me
 set tabstop=2
