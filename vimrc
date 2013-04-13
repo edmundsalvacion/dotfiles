@@ -23,7 +23,6 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'endel/vim-github-colorscheme'
 Bundle 'noahfrederick/Hemisu'
 Bundle 'Lokaltog/powerline'
-Bundle 'Valloric/YouCompleteMe'
 
 " disable arrows
 noremap <Up> <NOP>
@@ -64,21 +63,6 @@ set wildchar=<Tab>
 set wildcharm=<C-Z>
 nnoremap <F13> :b <C-Z>
 
-" pimp my status line
-set statusline=
-set statusline+=%-3.3n\                      " buffer number
-set statusline+=%f\                          " file name
-set statusline+=%h%m%r%w                     " flags
-set statusline+=[%{strlen(&ft)?&ft:'none'},  " filetype
-set statusline+=%{strlen(&fenc)?&fenc:&enc}, " encoding
-set statusline+=%{&fileformat}]              " file format
-set statusline+=\ %{fugitive#statusline()}   " fugitive
-set statusline+=%=                           " right align
-set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}\  " highlight
-set statusline+=%c,     "cursor column
-set statusline+=%l/%L   "cursor line/total lines
-set statusline+=\ %P    "percent through file
-
 " tame searching
 set gdefault
 set incsearch
@@ -106,9 +90,12 @@ hi Pmenu ctermbg=238 gui=bold
 if has("gui_running")
     set colorcolumn=100
     set guioptions=egmrt
-    set guifont=Monaco:h13
+    set guifont=Monaco\ for\ Powerline:h13
     colorscheme mustang
 endif
+
+" powerline
+set rtp+=$HOME/.vim/bundle/powerline/powerline/bindings/vim
 
 augroup vagrant
 	au!
