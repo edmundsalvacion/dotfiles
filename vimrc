@@ -20,6 +20,16 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'tpope/vim-markdown'
 Bundle 'bkad/CamelCaseMotion'
+Bundle 'endel/vim-github-colorscheme'
+Bundle 'noahfrederick/Hemisu'
+Bundle 'Lokaltog/powerline'
+Bundle 'Valloric/YouCompleteMe'
+
+" disable arrows
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 " tab me
 set tabstop=2
@@ -86,15 +96,6 @@ set wrap
 set textwidth=79
 set formatoptions=qrn1
 
-" movement
-set whichwrap=b,s,<,>,[,]
-map <silent> w <Plug>CamelCaseMotion_w
-map <silent> b <Plug>CamelCaseMotion_b
-map <silent> e <Plug>CamelCaseMotion_e
-sunmap w
-sunmap b
-sunmap e
-
 " colors and themes
 syntax on
 colorscheme ir_black
@@ -119,3 +120,17 @@ autocmd VimEnter * NERDTree
 autocmd VimEnter * wincmd p
 "autocmd BufEnter * NERDTreeMirror
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" git stuff
+augroup vim_config
+  autocmd FileType gitrebase call LoadGitrebaseBindings()
+augroup END
+
+fun! LoadGitrebaseBindings()
+  nnoremap  P :Pick
+  nnoremap  E :Edit
+  nnoremap  R :Reword
+  nnoremap  S :Squash
+  nnoremap  F :Fixup
+  nnoremap  C :Cycle
+endfun
